@@ -1,9 +1,7 @@
-document.addEventListener("DOMContentLoaded', () => 
+document.addEventListener('DOMContentLoaded', () =>{ 
     
     const cardsList = [
-        {
-            var cards = ["💐","🌹","🌻","🏵️","🌺","🌴","🌈","🍓","🍒","🍎","🍉","🍊","🥭","🍍","🍋","🍏","🍐","🥝","🍇","🥥","🍅","🌶️","🍄","🧅","🥦","🥑","🍔","🍕","🧁","🎂","🍬","🍩","🍫","🎈"]
-        }
+             "💐","🌹","🌻","🏵️","🌺","🌴","🌈","🍓","🍒","🍎","🍉","🍊","🥭","🍍","🍋","🍏","🍐","🥝","🍇","🥥","🍅","🌶️","🍄","🧅","🥦","🥑","🍔","🍕","🧁","🎂","🍬","🍩","🍫","🎈"
     ];
     
     
@@ -41,8 +39,8 @@ var chosenCardsIds = []
         //data-id: which card id we click
        
         if(this.getAttribute('src') != 'images/blank.png'){
-        chosenCards.push(cardsList[cardId].name); 
-        chosenCardsIds.push(cardId); 
+        chosenCards.push(cardsList[cardid].name); 
+        chosenCardsIds.push(cardid); 
 
         //that we are going to make the card flip itself 
 
@@ -53,19 +51,20 @@ var chosenCardsIds = []
     }
 
 
-        function checkForMatch() {
+    function checkForMatch() {
         attempts++; 
         var cards = document.querySelectorAll('img '); 
         var firstCard = chosenCardsIds [0]; 
         var secondCard = chosenCardsIds [1];
         
-      if (chosenCards [0] == chosenCards [1]) {}
+      if (chosenCards [0] == chosenCards [1]) {
             foundCards++; 
-            cards (firstCard.setAttribute("src', 'images/blank.png'));
-            cards [secondCard].setAttribute("src', 'images/blank.png'); 
-        }else{
-            cards (firstCard].setAttribute('src', 'images/placeholder.png');
-             cards [secondCard].setAttribute('src', 'images/placeholder.png');
+            cards[firstCard].setAttribute('src', 'images/blank.png')
+            cards[secondCard].setAttribute('src', 'images/blank.png')
+        }
+        else{
+            cards[firstCard].setAttribute('src', 'images/placeholder.png')
+             cards[secondCard].setAttribute('src', 'images/placeholder.png')
         }
     }
 
@@ -79,3 +78,4 @@ var chosenCardsIds = []
              }
             }
             initiateBoard();
+        })
