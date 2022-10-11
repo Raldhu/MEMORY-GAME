@@ -9,7 +9,7 @@ cardsList.sort( () =>0.5 - Math.random());
 const grid = document.querySelector('.gamegrid');
 const attemptsHolder = document.querySelector('.attemptholder');
 const foundHolder = document.querySelector('.foundHolder');
-const cardsInGame = 10;
+const cardsInGame = 18;
 
  var attempts = 0;
  var foundCards = 0;
